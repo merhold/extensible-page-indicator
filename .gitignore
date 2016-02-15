@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+
+# Local configuration file
+/local.properties
+
+# User-specific configurations
+.idea/
+*.iml
+
+# IntelliJ
+out/
+gen/
+
+# OS
+.DS_Store
+.DS_Store?
+Thumbs.db
+._*
+.Trashes
+.Spotlight-V100
+
+# Build
+/build
+/captures

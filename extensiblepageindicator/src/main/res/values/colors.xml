@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="fpi_default_indicator_inactive_color">#80FFFFFF</color>
+    <color name="fpi_default_indicator_active_color">#FFFFFF</color>
+
+</resources>
