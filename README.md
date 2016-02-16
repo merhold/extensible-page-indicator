@@ -9,7 +9,7 @@ https://dribbble.com/shots/2429036-Page-Scrolling
 
 Gradle
 ```groovy
-compile 'com.merhold.extensiblepageindicator:extensible-page-indicator:1.0.0'
+compile 'com.merhold.extensiblepageindicator:extensiblepageindicator:1.0'
 ```
 
 ## Usage
