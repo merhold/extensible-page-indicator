@@ -2,7 +2,8 @@
 
 Forked from original project by @merhold (https://github.com/merhold/extensible-page-indicator) to fix an error when ViewPager or its adapter is null
 
-## Download from Downloads folder and add to the project
+## Download 
+from Downloads folder and add to the project
 
 ## Usage
 Define view in xml layout
