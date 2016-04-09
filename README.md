@@ -2,12 +2,7 @@
 
 Forked from original project by @merhold (https://github.com/merhold/extensible-page-indicator) to fix an error when ViewPager or its adapter is null
 
-## Download
-
-Gradle
-```groovy
-compile 'com.maddog05.extensiblepageindicator:extensiblepageindicator:1.0.1'
-```
+## Download from Downloads folder and add to the project
 
 ## Usage
 Define view in xml layout
