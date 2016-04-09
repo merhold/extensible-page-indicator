@@ -6,7 +6,7 @@ Forked from original project by @merhold (https://github.com/merhold/extensible-
 
 Gradle
 ```groovy
-compile 'com.merhold.extensiblepageindicator:extensiblepageindicator:1.0'
+compile 'com.maddog05.extensiblepageindicator:extensiblepageindicator:1.0.1'
 ```
 
 ## Usage
