@@ -16,9 +16,10 @@ import android.view.View;
 
 public class ExtensiblePageIndicator extends View implements ViewPager.OnPageChangeListener {
 
-    private static float OFFSET_MULTIPLIER_DRAG = 1.2f;
-    private static float OFFSET_MULTIPLIER_SETTLING = 1.4f;
-    private static float OFFSET_MULTIPLIER_NORMAL = 0.30f;
+    //setted as final by maddog05
+    private static final float OFFSET_MULTIPLIER_DRAG = 1.2f;
+    private static final float OFFSET_MULTIPLIER_SETTLING = 1.4f;
+    private static final float OFFSET_MULTIPLIER_NORMAL = 0.30f;
 
     private ViewPager mViewPager;
     private Paint activePaint;
@@ -89,10 +90,19 @@ public class ExtensiblePageIndicator extends View implements ViewPager.OnPageCha
     }
 
     public void initViewPager(ViewPager viewPager) {
+        //modified by maddog05
+        if(mViewPager == viewPager)
+            return;
+        if(mViewPager != null)
+            viewPager.addOnPageChangeListener(this);
+        if(viewPager.getAdapter() == null)
+            throw new IllegalStateException("ViewPager doesn't have an adapter isntance.");
         mViewPager = viewPager;
-        viewPager.addOnPageChangeListener(this);
+        mViewPager.addOnPageChangeListener(this);
+        //finish modified
         circleCount = viewPager.getAdapter().getCount();
         mCurrentDragPage = viewPager.getCurrentItem();
+        invalidate();
     }
 
     @Override
@@ -127,6 +137,16 @@ public class ExtensiblePageIndicator extends View implements ViewPager.OnPageCha
 
     private void drawRect(Canvas canvas) {
 
+        //modified by maddog05
+        if(mViewPager == null)
+            return;
+
+        if(mViewPager.getAdapter() == null)
+            return;
+
+        if(mViewPager.getAdapter().getCount() == 0)
+            return;
+        //finish modified
         float top = getPaddingTop();
         float bottom = top + circleRadius * 2;
 
@@ -214,7 +234,10 @@ public class ExtensiblePageIndicator extends View implements ViewPager.OnPageCha
 
     @Override
     protected void onDetachedFromWindow() {
-        mViewPager.removeOnPageChangeListener(this);
+        //modified by maddog05
+        if(mViewPager != null)
+            mViewPager.removeOnPageChangeListener(this);
+        //finish modified
         super.onDetachedFromWindow();
     }
 }
