@@ -1,9 +1,16 @@
 # Extensible Page Indicator
 
-Forked from original project by @merhold (https://github.com/merhold/extensible-page-indicator) to fix an error when ViewPager or its adapter is null
+Simple view pager indicator based on Jardson Almeida concept. </br>
+https://dribbble.com/shots/2429036-Page-Scrolling
 
-## Download 
-from Downloads folder and add to the project
+![](https://i.imgur.com/b4Eb8zs.gif)
+
+## Download
+
+Gradle
+```groovy
+compile 'com.merhold.extensiblepageindicator:extensiblepageindicator:1.0'
+```
 
 ## Usage
 Define view in xml layout
