@@ -222,8 +222,8 @@ public class ExtensiblePageIndicator extends View implements ViewPager.OnPageCha
     @Override
     public void onPageScrollStateChanged(int state) {
         mState = state;
+        mSelectedPage = mViewPager.getCurrentItem();
         if (state == ViewPager.SCROLL_STATE_IDLE || state == ViewPager.SCROLL_STATE_DRAGGING) {
-            mSelectedPage = mViewPager.getCurrentItem();
             currentNormalOffset = 0;
             currentRelativePageOffset = 0;
         } else if (state == ViewPager.SCROLL_STATE_SETTLING) {
